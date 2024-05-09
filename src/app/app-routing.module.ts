@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { OptionsPage } from './options/options.page';
+
 
 const routes: Routes = [
   {
@@ -16,6 +16,8 @@ const routes: Routes = [
     path: 'options',
     loadChildren: () => import('./options/options.module').then( m => m.OptionsPageModule)
   },
+ 
+
 ];
 
 @NgModule({

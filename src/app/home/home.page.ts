@@ -26,8 +26,8 @@ export class HomePage
   }
 
   goToOptions() {
-    this.navCtrl.navigateForward('/settings');
-    
+    console.log("goToOptions() method called");
+    this.navCtrl.navigateForward('/options');
   }
   
     loadData() {

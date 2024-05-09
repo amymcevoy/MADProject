@@ -1,18 +1,11 @@
-<!-- options.page.html -->
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Options</ion-title>
+    <ion-title>options</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <form [formGroup]="optionsForm" (ngSubmit)="saveOptions()">
-    <ion-item>
-      <ion-label>Temperature Unit</ion-label>
-      <ion-select formControlName="temperatureUnit">
-        <ion-select-option value="Celsius">Celsius</ion-select-option>
-        <ion-select-option value="Fahrenheit">Fahrenheit</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-button expand="block" type="submit">Save</ion-button>
-  </form>
+
+<ion-content [fullscreen]="true">
+<button>About</button>
+<button>Info</button>
+
 </ion-content>
