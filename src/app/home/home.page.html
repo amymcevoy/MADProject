@@ -1,20 +1,57 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Weather
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="custom-bg">
+  <ion-card>
+    <ion-item lines="none">
+      <p>Todays Date:</p>
+      <ion-label slot="end">{{todaysDate | date: "EEE dd MMM"}}</ion-label>
+    </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item lines="none">
+      <span>
+      {{(weatherTemp?.temp -273.15).toFixed(0)}}°C
+    </span>
+ 
+    <img slot="end" [src]=weatherIcon>
+    </ion-item>
+
+    <ion-item>
+
+      <ion-icon name="location"></ion-icon>
+      <span>
+        {{cityName}}
+      </span>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <span class="let">Max Temp:</span>
+      <span  class="num"slot="end">{{(weatherTemp.temp_max - 273.15).toFixed(0)}}°C</span>
+    </ion-item>
+
+    <ion-item>
+      <span class="let">Min Temp:</span>
+      <span class="num"slot="end">{{(weatherTemp.temp_min - 273.15).toFixed(0)}}°C</span>
+    </ion-item>
+
+    <ion-item>
+      <span class="let">Humidity:</span>
+      <span class="num" slot="end">{{weatherTemp.humidity}}%</span>
+    </ion-item>
+
+    <ion-item>
+      <span class="let">Wind Makes It Feel Like:</span>
+      <span class="num" slot="end">{{(weatherTemp.feels_like - 273.15).toFixed(0)}}°C</span>
+    </ion-item>
+  </ion-card>
+
+  <ion-button style="margin-left: 110px;" (click)="goToOptions()">Other Options</ion-button>
+
 </ion-content>
