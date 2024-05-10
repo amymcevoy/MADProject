@@ -24,12 +24,13 @@ export class HomePage
   {
     this.loadData();
   }
-
+   /*Button navigatin*/
   goToOptions() {
     console.log("goToOptions() method called");
     this.navCtrl.navigateForward('/options');
   }
-  
+
+  /*Loads data from the API*/
     loadData() {
       this.httpClient.get(`${apiUrl}/weather?q=${"Galway"}&appid=${apiKey}`).subscribe(results => {
         console.log(results);

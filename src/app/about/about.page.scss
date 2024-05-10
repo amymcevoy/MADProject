@@ -1,7 +1,11 @@
 .custom-bg {
-    --background: linear-gradient(135deg, #f3d40c, #96350b);
+    --background: linear-gradient(135deg, #d4225e, #bd428e);
 }
-  .custom-button {
+p{
+    color: white;
+}
+
+.custom-button {
     display: block;
     width: 55%;
     margin-bottom: 10px;
@@ -12,9 +16,3 @@
     text-align: center;
     transition: all 0.3s ease;
   }
-  
- 
-  
-  
-
-  
